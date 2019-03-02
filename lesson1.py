@@ -1,24 +1,24 @@
-a = '54321'
-b = '123'
-print(a)
-print(b)
+string_test = '54321'
+substring_test = '123'
+print(string_test)
+print(substring_test)
 
-a1 = list(a)
-b1 = list(b)
+string = list(string_test)
+substring = list(substring_test)
 
 contained = False  
 
-for i in range (len(a)-len(b)+1):
-    if b1[0] == a1[i]: 
+for i in range (len(string_test) - len(substring_test) + 1):
+    if substring[0] == string[i]: 
         contained = True   
-        for j in range (1, len(b)):
-            if b1[j] != a1[i + j]: 
+        for j in range (1, len(substring_test)):
+            if substring[j] != string[i + j]: 
                 contained = False
                 break
     if contained:
         break
             
 if contained == False:
-    print ("Не содержится.")
+    print("It is not a substring.")
 else: 
-    print("Содержится.")
+    print("It is a substring.")
